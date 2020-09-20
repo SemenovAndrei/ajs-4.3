@@ -1,0 +1,23 @@
+npm init
+
+"scripts": {
+    "start": "webpack-dev-server --mode development",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production"
+  },
+
+babel
+npm install --save-dev @babel/core @babel/cli @babel/preset-env
+npm install core-js@3
+
+webpack
+npm install --save-dev webpack webpack-cli babel-loader
+
+HTML Webpack Plugin
+npm install --save-dev html-webpack-plugin
+
+MiniCSSExtractPlugin
+npm install --save-dev mini-css-extract-plugin css-loader
+
+webpack-dev-server
+npm install --save-dev webpack-dev-server
