@@ -13,14 +13,20 @@ test("status ok, 1", () => {
   expect(response).toBe("Ваш текущий уровень: 1");
 });
 
-test("status ok, 1", () => {
+test("status ok, 2", () => {
   fetchData.mockReturnValue({ status: "ok", level: "2" });
   const response = getLevel(1);
   expect(response).toBe("Ваш текущий уровень: 2");
 });
 
-test("status ok, 1", () => {
+test("status false, 1", () => {
   fetchData.mockReturnValue({ status: "false", level: "1" });
+  const response = getLevel(1);
+  expect(response).toBe("Информация об уровне временно недоступна");
+});
+
+test("empty", () => {
+  fetchData.mockReturnValue({});
   const response = getLevel(1);
   expect(response).toBe("Информация об уровне временно недоступна");
 });
